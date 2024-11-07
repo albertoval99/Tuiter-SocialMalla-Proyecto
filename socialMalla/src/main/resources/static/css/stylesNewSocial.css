@@ -1,0 +1,59 @@
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 4%;
+}
+
+.form-new-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    padding: 50px;
+    border: solid 10px #2C2A2E;
+    gap: 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    background-color: #e0e8f0;
+}
+
+input{
+    background-color: #1D2D45;
+    color: white;
+    border:solid 3px #2C2A2E;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.botones{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+label {
+    display: flex;
+    justify-content: left;
+    align-content: flex-start;
+    color: #1D2D45;
+    text-decoration: underline;
+}
+
+textarea{
+    width: 100%;
+    resize: none; /* Para q el usuario no cambie el tamaño */
+    background-color: #1D2D45;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border:solid 3px #2C2A2E;
+}
+
+@media (max-width: 700px) {
+    .form-new-post{
+        width: 100%;
+    }
+}
+
