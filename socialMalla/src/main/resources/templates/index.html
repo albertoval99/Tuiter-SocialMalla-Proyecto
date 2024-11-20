@@ -154,22 +154,22 @@
     </details>
 
 
-
-    <div class="posts" th:each="post : ${posts}">
-        <div class="post-container">
-            <div class="post">
-                <div class="post-titulo" th:text="${post.titulo}">Título</div>
-                <div class="post-descripcion" th:text="${post.descripcion}">Descripción</div>
-                <div class="post-footer">
-                    <span class="post-usuario" th:text="${post.nombreUsuario}"></span>
-                    <span class="post-fecha" th:text="${post.fechaPublicacion}"></span>
-                    <span class="post-likes" th:text="${post.numeroLikes} + ' Likes'"></span>
-                    <button class="boton-like">❤️</button>
+    <div class="grid-posts">
+        <div class="posts" th:each="post : ${posts}">
+            <div class="post-container">
+                <div class="post">
+                    <div class="post-titulo" th:text="${post.titulo}">Título</div>
+                    <div class="post-descripcion" th:text="${post.descripcion}">Descripción</div>
+                    <div class="post-footer">
+                        <span class="post-usuario" th:text="${post.nombreUsuario}"></span>
+                        <span class="post-fecha" th:text="${post.fechaPublicacion}"></span>
+                        <span class="post-likes" th:text="${post.numeroLikes} + ' Likes'"></span>
+                        <button class="boton-like">❤️</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </main>
 </body>
 </html>
