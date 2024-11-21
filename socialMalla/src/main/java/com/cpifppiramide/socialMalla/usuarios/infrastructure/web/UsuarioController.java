@@ -56,7 +56,7 @@ public class UsuarioController {
         try{
             Usuario usuario = usuarioUseCases.iniciarSesion(nombreUsuario,password);
             model.addAttribute("usuario",usuario);
-            return "index";
+            return "/";
         }catch (Exception e){
             model.addAttribute("error","Incorrect username or pasword");
             return "login";

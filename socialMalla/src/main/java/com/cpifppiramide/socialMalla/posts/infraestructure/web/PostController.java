@@ -40,7 +40,7 @@ public class PostController {
             @RequestParam String descripcion
     ) {
             postUseCases.crearPost(titulo, descripcion);
-            return "redirect:/index";
+            return "redirect:/";
     }
 
     @GetMapping("/")

@@ -9,4 +9,5 @@ public interface PostRepository {
     void savePost(Post post);
     List<Post> filtrarPorTodo(String titulo, String descripcion, String nombreUsuario, Date fecha, String orden);
 
+
 }
