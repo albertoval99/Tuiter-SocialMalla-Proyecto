@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDEX-SOCIAL MALLA</title>
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-<!--    <link rel="stylesheet" href="css/styles.css">-->
+    <link id="styles" rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/stylesDark.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -83,7 +85,7 @@
                 <b>MORE LIKES</b>
             </button>
 
-           <a href="/newSocial"><button class="boton-menu">
+            <a href="/newSocial"><button class="boton-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#bfcfe7">
                     <path d="M446.67-400h66.66v-126.67H640v-66.66H513.33V-720h-66.66v126.67H320v66.66h126.67V-400ZM80-80v-733.33q0-27 19.83-46.84Q119.67-880 146.67-880h666.66q27 0 46.84 19.83Q880-840.33 880-813.33v506.66q0 27-19.83 46.84Q840.33-240 813.33-240H240L80-80Zm131.33-226.67h602v-506.66H146.67v575l64.66-68.34Zm-64.66 0v-506.66 506.66Z" />
                 </svg>
@@ -110,7 +112,10 @@
 </aside>
 
 <main>
+
     <h2>MOST RECENT POSTS</h2>
+    <button id="btn-tema"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm26.67-67.67q131-11.66 218.83-105.5Q813.33-347 813.33-480T725.5-706.83q-87.83-93.84-218.83-105.5v664.66Z"/></svg></button>
+
     <details>
         <summary class="summary-filtro">
             <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#2c2a2e">
@@ -156,21 +161,126 @@
 
 
     <div class="grid-posts">
-        <div class="posts" th:each="post : ${posts}">
+        <!-- <div class="posts" th:each="post : ${posts}">
+             <div class="post-container">
+                 <div class="post">
+                     <div class="post-titulo" th:text="${post.titulo}">Título</div>
+                     <div class="post-descripcion" th:text="${post.descripcion}">Descripción</div>
+                     <div class="post-footer">
+                         <span class="post-usuario" th:text="${post.nombreUsuario}"></span>
+                         <span class="post-fecha" th:text="${post.fechaPublicacion}"></span>
+                         <span class="post-likes" th:text="${post.numeroLikes} + ' Likes'"></span>
+                         <button class="boton-like">❤️</button>
+                     </div>
+                 </div>
+             </div>
+         </div>-->
+        <div class="posts">
             <div class="post-container">
                 <div class="post">
-                    <div class="post-titulo" th:text="${post.titulo}">Título</div>
-                    <div class="post-descripcion" th:text="${post.descripcion}">Descripción</div>
+                    <div class="post-titulo">Explorando nuevas ideas</div>
+                    <div class="post-descripcion">Descubre los secretos del diseño moderno en menos de 5 minutos. ¡Te sorprenderás!</div>
                     <div class="post-footer">
-                        <span class="post-usuario" th:text="${post.nombreUsuario}"></span>
-                        <span class="post-fecha" th:text="${post.fechaPublicacion}"></span>
-                        <span class="post-likes" th:text="${post.numeroLikes} + ' Likes'"></span>
+                        <span class="post-usuario">Juan Pérez</span>
+                        <span class="post-fecha">21/11/2024</span>
+                        <span class="post-likes">25 Likes</span>
                         <button class="boton-like">❤️</button>
                     </div>
                 </div>
+
             </div>
+
+
         </div>
+        <div class="posts">
+            <div class="post-container">
+                <div class="post">
+                    <div class="post-titulo">Explorando nuevas ideas</div>
+                    <div class="post-descripcion">Descubre los secretos del diseño moderno en menos de 5 minutos. ¡Te sorprenderás!</div>
+                    <div class="post-footer">
+                        <span class="post-usuario">Juan Pérez</span>
+                        <span class="post-fecha">21/11/2024</span>
+                        <span class="post-likes">25 Likes</span>
+                        <button class="boton-like">❤️</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="posts">
+            <div class="post-container">
+                <div class="post">
+                    <div class="post-titulo">Explorando nuevas ideas</div>
+                    <div class="post-descripcion">Descubre los secretos del diseño moderno en menos de 5 minutos. ¡Te sorprenderás!</div>
+                    <div class="post-footer">
+                        <span class="post-usuario">Juan Pérez</span>
+                        <span class="post-fecha">21/11/2024</span>
+                        <span class="post-likes">25 Likes</span>
+                        <button class="boton-like">❤️</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="posts">
+            <div class="post-container">
+                <div class="post">
+                    <div class="post-titulo">Explorando nuevas ideas</div>
+                    <div class="post-descripcion">Descubre los secretos del diseño moderno en menos de 5 minutos. ¡Te sorprenderás!</div>
+                    <div class="post-footer">
+                        <span class="post-usuario">Juan Pérez</span>
+                        <span class="post-fecha">21/11/2024</span>
+                        <span class="post-likes">25 Likes</span>
+                        <button class="boton-like">❤️</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="posts">
+            <div class="post-container">
+                <div class="post">
+                    <div class="post-titulo">Explorando nuevas ideas</div>
+                    <div class="post-descripcion">Descubre los secretos del diseño moderno en menos de 5 minutos. ¡Te sorprenderás!</div>
+                    <div class="post-footer">
+                        <span class="post-usuario">Juan Pérez</span>
+                        <span class="post-fecha">21/11/2024</span>
+                        <span class="post-likes">25 Likes</span>
+                        <button class="boton-like">❤️</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="posts">
+            <div class="post-container">
+                <div class="post">
+                    <div class="post-titulo">Explorando nuevas ideas</div>
+                    <div class="post-descripcion">Descubre los secretos del diseño moderno en menos de 5 minutos. ¡Te sorprenderás!</div>
+                    <div class="post-footer">
+                        <span class="post-usuario">Juan Pérez</span>
+                        <span class="post-fecha">21/11/2024</span>
+                        <span class="post-likes">25 Likes</span>
+                        <button class="boton-like">❤️</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
     </div>
 </main>
+<script src="../static/js/theme.js"></script>
 </body>
 </html>

@@ -64,8 +64,5 @@ public class UsuarioController {
 
     }
 
-    @GetMapping("/settings")
-    public String settings(){
-        return "settings";
-    }
+
 }

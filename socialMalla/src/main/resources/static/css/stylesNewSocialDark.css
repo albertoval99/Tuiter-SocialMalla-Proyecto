@@ -20,7 +20,7 @@ main{
 }
 
 input{
-    background-color: #1D2D45;
+    background-color: #2C2A2E;
     color: white;
     border:solid 3px #2C2A2E;
     border-radius: 5px;
@@ -37,23 +37,24 @@ label {
     display: flex;
     justify-content: left;
     align-content: flex-start;
-    color: #1D2D45;
+    color: #2C2A2E;
     text-decoration: underline;
 }
 
 textarea{
     width: 100%;
     resize: none; /* Para q el usuario no cambie el tamaño */
-    background-color: #1D2D45;
+    background-color: #2C2A2E;
     padding: 10px;
     border-radius: 5px;
     color: white;
     border:solid 3px #2C2A2E;
 }
 
-
 @media (max-width: 700px) {
     .form-new-post{
         width: 100%;
     }
 }
+
+

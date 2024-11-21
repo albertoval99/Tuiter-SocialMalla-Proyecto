@@ -56,7 +56,7 @@ aside {
 .boton-menu {
     display: flex;
     justify-content: left;
-    gap: 15px;
+    gap: 25px;
     padding: 10px;
     background-color: #1D2D45;
     border-radius: 10px;
@@ -66,6 +66,8 @@ aside {
     color: white;
     text-align: center;
     height: 45px;
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
 }
 
 .boton-menu:hover {
@@ -78,12 +80,12 @@ aside {
 /* AQUI EMPIEZA EL MAIN*/
 
 main{
-     position: absolute;
-       width: 85%;
-       left: 15%;
-       box-sizing: border-box;
-       overflow-x: hidden; /*soluciona el scroll hacia la derecha*/
-       padding:20px;
+    position: absolute;
+    width: 85%;
+    left: 15%;
+    box-sizing: border-box;
+    overflow-x: hidden; /*soluciona el scroll hacia la derecha*/
+    padding:20px;
 }
 
 h2 {
@@ -96,6 +98,10 @@ h2 {
     font-size: 50px;
     color: #2c2a2e;
     text-decoration: underline;
+}
+#btn-tema{
+    font-family:"Oswald", sans-serif;
+    font-size: 18px;
 }
 
 /*AQUI EMPIEZA EL FILTRO */
@@ -139,6 +145,7 @@ input,select,.boton-aplicar {
     height: 40px;
     background-color:#BFCFE7;
     border: solid 4px #1D2D45;
+    font-family: inherit;
 }
 
 .boton-aplicar {
@@ -290,7 +297,6 @@ header{
 
 
 @media (max-width: 700px) {
-
     body{
         padding: 0;
         margin: 0;
@@ -428,5 +434,6 @@ header{
         left: 0;
     }
 
-  
+
 }
+
