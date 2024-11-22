@@ -14,9 +14,9 @@ img {
     height: 85%;
     width: 85%;
     padding-top:30px;
-    padding-right: 10px;
+    padding-right: 4px;
+    padding-left: 9px;
 }
-
 
 
 /* AQUI EMPIEZA EL MENU LATERAL */
@@ -89,6 +89,20 @@ main{
     box-sizing: border-box;
     overflow-x: hidden; /*soluciona el scroll hacia la derecha*/
     padding:20px;
+}
+.cabezeraIndex{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-left:470px;
+    cursor:pointer;
+}
+
+.cabezera{
+    display:flex;
+    justify-content:flex-end;
+    padding:20px;
+    cursor:pointer;
 }
 
 h2 {
@@ -320,6 +334,20 @@ header{
 
     h2 {
         font-size: 25px;
+    }
+
+    .cabezeraIndex{
+        display:none;
+        & btn-tema{
+            display:none;
+        }
+    }
+
+    .cabezeraIndex{
+        display:none;
+        & btn-tema{
+            display:none;
+        }
     }
 
     body {

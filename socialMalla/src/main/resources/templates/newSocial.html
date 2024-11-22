@@ -7,11 +7,10 @@
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link id="styles" rel="stylesheet" href="css/styles.css">
     <link id="newSocialStyles" rel="stylesheet" href="css/stylesNewSocial.css">
-    <link rel="stylesheet" href="css/stylesDark.css">
-    <link rel="stylesheet" href="css/stylesNewSocialDark.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="js/scripts.js"></script>
 </head>
 <body>
 <header>
@@ -88,6 +87,8 @@
                 </svg>
                 <b>NEW POST</b>
             </button></a>
+            <button class="btn-tema"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm26.67-67.67q131-11.66 218.83-105.5Q813.33-347 813.33-480T725.5-706.83q-87.83-93.84-218.83-105.5v664.66Z"/></svg></button>
+
         </div>
 
         <div class="botones-inicio">
@@ -104,9 +105,14 @@
     </nav>
 </aside>
 
+<div class="cabezera">
+    <button id="btn-tema"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm26.67-67.67q131-11.66 218.83-105.5Q813.33-347 813.33-480T725.5-706.83q-87.83-93.84-218.83-105.5v664.66Z"/></svg></button>
+</div>
 
 <main>
+
     <h2>CREATE NEW SOCIAL</h2>
+
     <form action="/newSocial" method="post">
         <div class="form-new-post">
             <input type="hidden" name="nombreUsuario" th:value="${nombreUsuario}">

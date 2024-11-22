@@ -11,8 +11,11 @@ body {
 }
 
 img {
-    height: auto;
-    width: 100%;
+    height: 85%;
+    width: 85%;
+    padding-top:30px;
+    padding-right: 4px;
+    padding-left: 10px;
 }
 
 
@@ -31,8 +34,8 @@ aside {
 .logo {
     display: flex;
     justify-content: center;
-    height: 220px;
-    width: 220px;
+    height: 200px;
+    width: 200px;
 }
 
 .menu-navegacion {
@@ -87,6 +90,22 @@ main{
     overflow-x: hidden; /*soluciona el scroll hacia la derecha*/
     padding:20px;
 }
+
+.cabezeraIndex{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-left:470px;
+    cursor:pointer;
+}
+
+.cabezera{
+    display:flex;
+    justify-content:flex-end;
+    padding:20px;
+    cursor:pointer;
+}
+
 
 h2 {
     display: flex;
@@ -309,8 +328,22 @@ header{
         padding: 10px;
         width: 100%;
     }
+    .cabezeraIndex{
+        display:none;
+        & btn-tema{
+            display:none;
+        }
+    }
 
-    h2 {
+    .cabezeraIndex{
+        display:none;
+        & btn-tema{
+            display:none;
+        }
+    }
+
+
+h2 {
         font-size: 25px;
     }
 
@@ -323,8 +356,9 @@ header{
     }
 
     .img-header {
-        height: 90px;
-        width: 90px;
+        height: 25%;
+        width: 25%;
+        padding: 0;
     }
 
     .img-aside{
