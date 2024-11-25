@@ -8,7 +8,11 @@ function listeners(){
     document.querySelector('#nombre').addEventListener("blur",validarNombre);
     document.querySelector('#apellidos').addEventListener("blur",validarApellidos);
     document.querySelector('#diaNacimiento').addEventListener("blur",validarEdad);
-    //username->tiene q tener un numero
+    document.querySelector('#nombreUsuario').addEventListener("blur",validarNombreUsuario);
+    document.querySelector('#password').addEventListener("blur",validarPassword);
+    document.querySelector('#repeatPassword').addEventListener("blur",validarRepeatPassword);
+    document.querySelector('#email').addEventListener("blur",validarEmail);
+    document.querySelector('#numeroTelefono').addEventListener("blur",validarNumeroTelefono);
 
 }
 /*Cambiar tema*/
@@ -103,3 +107,57 @@ function validarEdad(){
     inputEdad.classList.remove("invalido");
     return true;
 }
+function validarNombreUsuario(){
+    let inputNombreUsuario= document.querySelector('#nombreUsuario');
+    let error= document.querySelector('#errorNombreUsuario');
+    if (inputNombreUsuario.value.length<5){
+        error.innerText="El nombre de usuario debe tener como minimo 5 caracteres";
+        inputNombreUsuario.classList.add("invalido");
+        return false;
+    }
+    error.innerText="";
+    inputNombreUsuario.classList.remove("invalido");
+    return true;
+}
+function validarPassword(){
+    let inputPassword= document.querySelector('#password');
+    let error = document.querySelector('#errorPassword');
+    let expresion = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+
+    if (!expresion.test(inputPassword.value)) {
+        error.textContent = "La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula y un número.";
+        inputNombre.classList.add("invalido");
+        return false;
+    }
+    error.textContent="";
+    inputNombre.classList.remove("invalido");
+    return true;
+
+}
+function validarRepeatPassword(){
+    let inputPassword= document.querySelector('#password');
+    let inputRepeatPassword= document.querySelector('#repeatPassword');
+    let error = document.querySelector('#errorRepeatPassword');
+    if (inputPassword.value !== inputRepeatPassword.value) {
+        error.textContent = "Las contraseñas no coinciden";
+        inputNombre.classList.add("invalido");
+        return false;
+    }
+    error.textContent="";
+    inputNombre.classList.remove("invalido");
+    return true;
+}
+function validarEmail(){
+    let inputEmail = document.querySelector('#email');
+    let error= document.querySelector('#errorEmail');
+    let expresion = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+    if (!expresion.test(inputEmail.value)) {
+        error.textContent = "El correo electrónico no es válido";
+        inputNombre.classList.add("invalido");
+        return false;
+    }
+    error.textContent="";
+    inputNombre.classList.remove("invalido");
+    return true;
+}
+function validarNumeroTelefono(){}

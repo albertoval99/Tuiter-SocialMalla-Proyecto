@@ -97,7 +97,7 @@ main{
     align-items:center;
       & h2{
       font-size:60px;
-      margin-left:620px;
+      margin-left:420px;
       }
       & button{
         cursor:pointer;

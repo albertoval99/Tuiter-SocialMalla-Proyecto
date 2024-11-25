@@ -115,9 +115,11 @@
                 <input id="diaNacimiento" name="diaNacimiento" type="date">
 
                 <label>Password:<span>*</span></label>
+                <span id="errorPassword"></span>
                 <input id="password" name="password" type="password">
 
                 <label>Email:<span>*</span></label>
+                <span id="errorEmail"></span>
                 <input id="email" name="email" type="text">
             </div>
 
@@ -127,12 +129,15 @@
                 <input id="apellidos" name="apellidos" type="text">
 
                 <label>Username:<span>*</span></label>
+                <span id="errorNombreUsuario"></span>
                 <input id="nombreUsuario" name="nombreUsuario" type="text">
 
                 <label>Repeat Password:<span>*</span></label>
+                <span id="errorRepeatPassword"></span>
                 <input id="repeatPassword" name="repeatPassword" type="password">
 
                 <label>Phone:</label>
+                <span id="errorNumeroTelefono"></span>
                 <input id="numeroTelefono" name="numeroTelefono" type="text">
             </div>
             <p>Do you have an account? <a class="enlace-redirect-create-account" href="/login">Click here</a></p>

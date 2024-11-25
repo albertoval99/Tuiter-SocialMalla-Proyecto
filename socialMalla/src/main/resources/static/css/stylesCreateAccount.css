@@ -16,7 +16,6 @@ main {
     border-radius: 15px;
     background-color: #e0e8f0;
     margin-bottom: 25px;
-    margin-top: 2%;
 }
 
 .column {
@@ -47,7 +46,6 @@ p {
 }
 
 .invalido {
-    background-color: #FFDDDD;
     border: 1px solid #FF0000;
 }
 
