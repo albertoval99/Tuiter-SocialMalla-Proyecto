@@ -51,6 +51,12 @@ textarea{
     border:solid 3px #2C2A2E;
 }
 
+.botones-inicio{
+    & .btn-tema{
+        display:none
+    }
+}
+
 @media (max-width: 700px) {
     .form-new-post{
         width: 100%;

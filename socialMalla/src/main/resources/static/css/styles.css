@@ -95,8 +95,13 @@ main{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-left:470px;
-    cursor:pointer;
+      & h2{
+      font-size:60px;
+      margin-left:620px;
+      }
+      & button{
+        cursor:pointer;
+      }
 }
 
 .cabezera{
@@ -118,10 +123,7 @@ h2 {
     color: #2c2a2e;
     text-decoration: underline;
 }
-#btn-tema{
-    font-family:"Oswald", sans-serif;
-    font-size: 18px;
-}
+
 
 /*AQUI EMPIEZA EL FILTRO */
 
@@ -172,15 +174,15 @@ input,select,.boton-aplicar {
     color: white;
     border: solid 2px #BFCFE7;
     margin-bottom: 10px;
+    margin-top: 10px;
+    width:20%;
 }
 
 .boton-aplicar:hover {
     background-color: #004080;
 }
 
-.boton-aplicar:active {
-    background-color: #004080;
-}
+
 
 summary{
     display: flex;
@@ -259,7 +261,6 @@ details{
 }
 
 .post-titulo {
-
     font-size: 1.5em;
     color: #BFCFE7;
     margin-bottom: 5px;
@@ -271,7 +272,6 @@ details{
 }
 
 .boton-like {
-    background-color: #1D2D45;
     border: solid 3px #BFCFE7;
     border-radius: 5px;
     padding: 5px;
@@ -279,12 +279,13 @@ details{
     cursor: pointer;
     width: 6%;
     height: auto;
+    background-color:#1D2D45;
+}
+.likePulsado{
+    background-color:#BFCFE7;
 }
 
-.boton-like:hover {
-    transform: translateY(-2px);
-    background-color: #BFCFE7;
-}
+
 
 /*AQUI ACABAN LOS POSTS */
 
@@ -304,16 +305,17 @@ button {
     text-align: center;
     height: 45px;
     justify-content: center;
+    cursor:pointer;
 }
 
-button:hover {
-    background-color: #004080;
-}
 
 header{
     display: none;
 }
 
+.h2IndexMovil{
+    display:none;
+}
 
 @media (max-width: 700px) {
     body{
@@ -335,15 +337,13 @@ header{
         }
     }
 
-    .cabezeraIndex{
+
+    .cabezera{
         display:none;
-        & btn-tema{
-            display:none;
-        }
     }
 
 
-h2 {
+    h2 {
         font-size: 25px;
     }
 
@@ -404,47 +404,51 @@ h2 {
         width: 100px;
     }
 
-    form {
-        width: auto;
-    }
     .grid-posts{
         display:flex;
         flex-direction:column;
     }
 
     .post {
-
-        max-width: 350px;
-        min-width: 350px;
+         max-width: 94%;
+         min-width: 94%;
 
     }
 
     .filtros-linea {
-        flex-wrap: wrap;
-        gap: 3px;
-    }
+          display:grid;
+          grid-template-columns:repeat(2,220px);
+          justify-items:center;
 
-    .summary-filtro{
-        padding-top: 20px;
-    }
+      }
 
-    .campos-form {
-        margin: 1px;
-        width: 50%;
-        max-width: 120px;
-    }
+      form {
+          width: auto;
+      }
 
-    input,select {
-        padding: 4px;
-        height: 30px;
-    }
+      .summary-filtro{
+          padding-top: 20px;
+      }
 
-    .boton-aplicar{
-        padding: 4px;
-        height: 30px;
-        width: 50%;
-        margin-top: 10px;
-    }
+      .campos-form {
+          margin: 1px;
+          width: 50%;
+          max-width: 120px;
+      }
+
+      input,select {
+          padding: 4px;
+          height: 30px;
+          font-size: 10px;
+      }
+
+      .boton-aplicar{
+          padding: 4px;
+          height: 30px;
+          width: 90%;
+          margin-top:20px;
+          cursor:pointer;
+      }
 
     .logo {
         height: 50px;
