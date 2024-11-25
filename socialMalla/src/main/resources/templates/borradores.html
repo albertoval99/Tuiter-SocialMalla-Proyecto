@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CREATE ACCOUNT-SOCIAL MALLA</title>
+    <title>INDEX-SOCIAL MALLA</title>
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link id="styles" rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/stylesCreateAccount.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <script src="js/scripts.js"></script>
+    <script src="js/mostrarBorrador.js"></script>
 </head>
+
 <body>
 <header>
     <img src="images/logo.png" class="img-header" alt="Logo"/>
@@ -20,9 +23,9 @@
         <summary>
             <svg class="hamburguesa" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#bfcfe7"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
         </summary>
-
         <aside class="aside-movil">
             <img src="images/logo.png" class="img-aside" alt="Logo"/>
+
             <nav class="menu-navegacion-header">
                 <div class="botones-inicio">
                     <a href="/"><button class="boton-menu-aside">
@@ -43,8 +46,16 @@
                         </svg>
                     </button></a>
                     <button class="btn-tema"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#BFCFE7"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm26.67-67.67q131-11.66 218.83-105.5Q813.33-347 813.33-480T725.5-706.83q-87.83-93.84-218.83-105.5v664.66Z"/></svg></button>
+
                 </div>
+
                 <div class="botones-inicio">
+                    <a href="/createAccount"><button class="boton-menu-aside">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#bfcfe7">
+                            <path d="M726.67-400v-126.67H600v-66.66h126.67V-720h66.66v126.67H920v66.66H793.33V-400h-66.66ZM360-480.67q-66 0-109.67-43.66Q206.67-568 206.67-634t43.66-109.67Q294-787.33 360-787.33t109.67 43.66Q513.33-700 513.33-634t-43.66 109.67Q426-480.67 360-480.67ZM40-160v-100q0-34.67 17.5-63.17T106.67-366q70.66-32.33 130.89-46.5 60.22-14.17 122.33-14.17T482-412.5q60 14.17 130.67 46.5 31.66 15 49.5 43.17Q680-294.67 680-260v100H40Zm66.67-66.67h506.66V-260q0-14.33-7.83-27t-20.83-19q-65.34-31-116.34-42.5T360-360q-57.33 0-108.67 11.5Q200-337 134.67-306q-13 6.33-20.5 19t-7.5 27v33.33ZM360-547.33q37 0 61.83-24.84Q446.67-597 446.67-634t-24.84-61.83Q397-720.67 360-720.67t-61.83 24.84Q273.33-671 273.33-634t24.84 61.83Q323-547.33 360-547.33Zm0-86.67Zm0 407.33Z" />
+                        </svg>
+                    </button></a>
+
                     <a href="/login"><button class="boton-menu-aside">
                         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#bfcfe7">
                             <path d="M480.67-120v-66.67h292.66v-586.66H480.67V-840h292.66q27 0 46.84 19.83Q840-800.33 840-773.33v586.66q0 27-19.83 46.84Q800.33-120 773.33-120H480.67Zm-63.34-176.67-47-48 102-102H120v-66.66h351l-102-102 47-48 184 184-182.67 182.66Z" />
@@ -85,6 +96,13 @@
         </div>
 
         <div class="botones-inicio">
+            <a href="/createAccount"><button class="boton-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#bfcfe7">
+                    <path d="M726.67-400v-126.67H600v-66.66h126.67V-720h66.66v126.67H920v66.66H793.33V-400h-66.66ZM360-480.67q-66 0-109.67-43.66Q206.67-568 206.67-634t43.66-109.67Q294-787.33 360-787.33t109.67 43.66Q513.33-700 513.33-634t-43.66 109.67Q426-480.67 360-480.67ZM40-160v-100q0-34.67 17.5-63.17T106.67-366q70.66-32.33 130.89-46.5 60.22-14.17 122.33-14.17T482-412.5q60 14.17 130.67 46.5 31.66 15 49.5 43.17Q680-294.67 680-260v100H40Zm66.67-66.67h506.66V-260q0-14.33-7.83-27t-20.83-19q-65.34-31-116.34-42.5T360-360q-57.33 0-108.67 11.5Q200-337 134.67-306q-13 6.33-20.5 19t-7.5 27v33.33ZM360-547.33q37 0 61.83-24.84Q446.67-597 446.67-634t-24.84-61.83Q397-720.67 360-720.67t-61.83 24.84Q273.33-671 273.33-634t24.84 61.83Q323-547.33 360-547.33Zm0-86.67Zm0 407.33Z" />
+                </svg>
+                <b>NEW ACCOUNT</b>
+            </button></a>
+
             <a href="/login"><button class="boton-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#bfcfe7">
                     <path d="M480.67-120v-66.67h292.66v-586.66H480.67V-840h292.66q27 0 46.84 19.83Q840-800.33 840-773.33v586.66q0 27-19.83 46.84Q800.33-120 773.33-120H480.67Zm-63.34-176.67-47-48 102-102H120v-66.66h351l-102-102 47-48 184 184-182.67 182.66Z" />
@@ -95,66 +113,15 @@
     </nav>
 </aside>
 
-<div class="cabezera">
-    <button id="btn-tema"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm26.67-67.67q131-11.66 218.83-105.5Q813.33-347 813.33-480T725.5-706.83q-87.83-93.84-218.83-105.5v664.66Z"/></svg></button>
-</div>
-
 <main>
-    <h2>CREATE NEW ACCOUNT</h2>
 
-    <form action="/createAccount" method="post" id="formulario">
-        <div class="form-create-account">
-            <div class="column">
-                <label>Name:<span>*</span></label>
-                <span id="errorNombre"></span>
-                <input id="nombre" name="nombre" type="text">
+    <h2 class="h2IndexMovil">MY DRAFTS</h2>
+    <div class="cabezeraIndex">
+        <h2>MY DRAFTS</h2>
+        <button id="btn-tema"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm26.67-67.67q131-11.66 218.83-105.5Q813.33-347 813.33-480T725.5-706.83q-87.83-93.84-218.83-105.5v664.66Z"/></svg></button>
+    </div>
 
-
-                <label>Birth:<span>*</span></label>
-                <span id="errorEdad"></span>
-                <input id="diaNacimiento" name="diaNacimiento" type="date">
-
-                <label>Password:<span>*</span></label>
-                <span id="errorPassword"></span>
-                <input id="password" name="password" type="password">
-
-                <label>Email:<span>*</span></label>
-                <span id="errorEmail"></span>
-                <input id="email" name="email" type="text">
-            </div>
-
-            <div class="column">
-                <label>Surnames:<span>*</span></label>
-                <span id="errorApellidos"></span>
-                <input id="apellidos" name="apellidos" type="text">
-
-                <label>Username:<span>*</span></label>
-                <span id="errorNombreUsuario"></span>
-                <input id="nombreUsuario" name="nombreUsuario" type="text">
-
-                <label>Repeat Password:<span>*</span></label>
-                <span id="errorRepeatPassword"></span>
-                <input id="repeatPassword" name="repeatPassword" type="password">
-
-                <label>Phone:</label>
-                <span id="errorNumeroTelefono"></span>
-                <input id="numeroTelefono" name="numeroTelefono" type="text">
-            </div>
-            <p>Do you have an account? <a class="enlace-redirect-create-account" href="/login">Click here</a></p>
-        </div>
-
-        <button type="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#bfcfe7">
-                <path d="M726.67-400v-126.67H600v-66.66h126.67V-720h66.66v126.67H920v66.66H793.33V-400h-66.66ZM360-480.67q-66 0-109.67-43.66Q206.67-568 206.67-634t43.66-109.67Q294-787.33 360-787.33t109.67 43.66Q513.33-700 513.33-634t-43.66 109.67Q426-480.67 360-480.67ZM40-160v-100q0-34.67 17.5-63.17T106.67-366q70.66-32.33 130.89-46.5 60.22-14.17 122.33-14.17T482-412.5q60 14.17 130.67 46.5 31.66 15 49.5 43.17Q680-294.67 680-260v100H40Zm66.67-66.67h506.66V-260q0-14.33-7.83-27t-20.83-19q-65.34-31-116.34-42.5T360-360q-57.33 0-108.67 11.5Q200-337 134.67-306q-13 6.33-20.5 19t-7.5 27v33.33ZM360-547.33q37 0 61.83-24.84Q446.67-597 446.67-634t-24.84-61.83Q397-720.67 360-720.67t-61.83 24.84Q273.33-671 273.33-634t24.84 61.83Q323-547.33 360-547.33Zm0-86.67Zm0 407.33Z" />
-            </svg>
-            <b>CREATE ACCOUNT</b>
-        </button>
-
-        <div th:if="${error}">
-            <p style="color: red;" th:text="${error}"></p>
-        </div>
-    </form>
-
+    <div class="grid-posts"  id="borradores"></div>
 </main>
 </body>
 </html>

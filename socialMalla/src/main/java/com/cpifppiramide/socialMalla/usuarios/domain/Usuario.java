@@ -14,9 +14,10 @@ public class Usuario {
     private LocalDate diaNacimiento;
     private String password;
     private String numeroTelefono;
+    private String email;
     private List<Post> postsUsuario;
 
-    public Usuario(String id, String nombre, String apellidos, String nombreUsuario, LocalDate diaNacimiento, String password, String numeroTelefono) {
+    public Usuario(String id, String nombre, String apellidos, String nombreUsuario, LocalDate diaNacimiento, String password, String numeroTelefono,String email) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -24,6 +25,7 @@ public class Usuario {
         this.diaNacimiento = diaNacimiento;
         this.password = password;
         this.numeroTelefono = numeroTelefono;
+        this.email =email;
         this.postsUsuario = new LinkedList<>();
     }
 
@@ -84,5 +86,17 @@ public class Usuario {
 
     public void setNumeroTelefono(String numeroTelefono) {
         this.numeroTelefono = numeroTelefono;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

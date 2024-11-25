@@ -32,10 +32,11 @@ public class UsuarioController {
             @RequestParam(value = "nombreUsuario") String nombreUsuario,
             @RequestParam(value = "diaNacimiento") LocalDate diaNacimiento,
             @RequestParam(value = "password") String password,
-            @RequestParam(value = "numeroTelefono") String numeroTelefono) {
+            @RequestParam(value = "numeroTelefono") String numeroTelefono,
+            @RequestParam(value = "email") String email){
 
         try {
-            usuarioUseCases.registro(nombre, apellidos, nombreUsuario, diaNacimiento, password, numeroTelefono);
+            usuarioUseCases.registro(nombre, apellidos, nombreUsuario, diaNacimiento, password, numeroTelefono,email);
             return "login";
         } catch (Exception e) {
             model.addAttribute("error", "Username already exists, please try again.");

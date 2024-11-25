@@ -19,7 +19,7 @@ public class UsuarioUseCases {
 
     }
 
-    public void registro(String nombre, String apellidos, String nombreUsuario, LocalDate diaNacimiento, String password, String numeroTelefono) {
+    public void registro(String nombre, String apellidos, String nombreUsuario, LocalDate diaNacimiento, String password, String numeroTelefono, String email) {
         Usuario usuario = new Usuario();
         usuario.setNombre(nombre);
         usuario.setApellidos(apellidos);
@@ -27,6 +27,7 @@ public class UsuarioUseCases {
         usuario.setDiaNacimiento(diaNacimiento);
         usuario.setPassword(password);
         usuario.setNumeroTelefono(numeroTelefono);
+        usuario.setEmail(email);
 
         String cifrada = passwordEncoder.encode(usuario.getPassword());
         usuario.setPassword(cifrada);

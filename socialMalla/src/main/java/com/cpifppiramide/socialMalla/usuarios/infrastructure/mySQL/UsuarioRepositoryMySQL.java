@@ -15,8 +15,8 @@ public class UsuarioRepositoryMySQL implements UsuarioRepository {
     public void saveUsuario(Usuario usuario) {
         try {
             String sql = "insert into usuarios " +
-                    "(nombre, apellidos, nombreUsuario, diaNacimiento, password, numeroTelefono)" +
-                    " values (?,?,?,?,?,?)";
+                    "(nombre, apellidos, nombreUsuario, diaNacimiento, password, numeroTelefono, email)" +
+                    " values (?,?,?,?,?,?,?)";
             PreparedStatement statement = DBConnection.getInstance().prepareStatement(sql);
             statement.setString(1, usuario.getNombre());
             statement.setString(2, usuario.getApellidos());
@@ -24,6 +24,7 @@ public class UsuarioRepositoryMySQL implements UsuarioRepository {
             statement.setString(4, String.valueOf(usuario.getDiaNacimiento()));
             statement.setString(5,usuario.getPassword());
             statement.setString(6, usuario.getNumeroTelefono());
+            statement.setString(7, usuario.getEmail());
             statement.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);

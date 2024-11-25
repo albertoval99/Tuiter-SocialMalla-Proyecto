@@ -59,5 +59,8 @@ public class PostController {
     }
 
 
-
-}
+    @GetMapping("/borradores")
+        public String mostrarBorradores(){
+            return "borradores";
+        }
+    }

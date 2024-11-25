@@ -13,6 +13,7 @@ function listeners(){
     document.querySelector('#repeatPassword').addEventListener("blur",validarRepeatPassword);
     document.querySelector('#email').addEventListener("blur",validarEmail);
     document.querySelector('#numeroTelefono').addEventListener("blur",validarNumeroTelefono);
+    document.querySelector('#formulario').addEventListener("submit",validarFormulario);
 
 }
 /*Cambiar tema*/
@@ -111,11 +112,11 @@ function validarNombreUsuario(){
     let inputNombreUsuario= document.querySelector('#nombreUsuario');
     let error= document.querySelector('#errorNombreUsuario');
     if (inputNombreUsuario.value.length<5){
-        error.innerText="El nombre de usuario debe tener como minimo 5 caracteres";
+        error.textContent="El nombre de usuario debe tener como minimo 5 caracteres";
         inputNombreUsuario.classList.add("invalido");
         return false;
     }
-    error.innerText="";
+    error.textContent="";
     inputNombreUsuario.classList.remove("invalido");
     return true;
 }
@@ -126,11 +127,11 @@ function validarPassword(){
 
     if (!expresion.test(inputPassword.value)) {
         error.textContent = "La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula y un número.";
-        inputNombre.classList.add("invalido");
+        inputPassword.classList.add("invalido");
         return false;
     }
     error.textContent="";
-    inputNombre.classList.remove("invalido");
+    inputPassword.classList.remove("invalido");
     return true;
 
 }
@@ -140,24 +141,59 @@ function validarRepeatPassword(){
     let error = document.querySelector('#errorRepeatPassword');
     if (inputPassword.value !== inputRepeatPassword.value) {
         error.textContent = "Las contraseñas no coinciden";
-        inputNombre.classList.add("invalido");
+        inputRepeatPassword.classList.add("invalido");
         return false;
     }
     error.textContent="";
-    inputNombre.classList.remove("invalido");
+    inputRepeatPassword.classList.remove("invalido");
     return true;
 }
 function validarEmail(){
     let inputEmail = document.querySelector('#email');
     let error= document.querySelector('#errorEmail');
-    let expresion = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+    let expresion =/[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
     if (!expresion.test(inputEmail.value)) {
         error.textContent = "El correo electrónico no es válido";
-        inputNombre.classList.add("invalido");
+        inputEmail.classList.add("invalido");
         return false;
     }
     error.textContent="";
-    inputNombre.classList.remove("invalido");
+    inputEmail.classList.remove("invalido");
     return true;
 }
-function validarNumeroTelefono(){}
+function validarNumeroTelefono(){
+    let inputPhone=document.querySelector('#numeroTelefono');
+    let error = document.querySelector('#errorNumeroTelefono');
+    let expresion=/^\d{9}$/;
+    if(!expresion.test(inputPhone.value)){
+        error.textContent= "El telefono tiene que ser 9 digitos exactos";
+        inputPhone.classList.add("invalido");
+        return false;
+    }
+    error.textContent="";
+    inputPhone.classList.remove("invalido");
+    return true;
+}
+function validarFormulario(e){
+    e.preventDefault();
+    if(!validarNombre()){
+        document.querySelector('#nombre').focus();
+    }else if (!validarApellidos()) {
+        document.querySelector('#apellidos').focus();
+    }else if (!validarEdad()) {
+         document.querySelector('#diaNacimiento').focus();
+    }else if (!validarNombreUsuario()) {
+         document.querySelector('#nombreUsuario').focus();
+    }else if (!validarPassword()) {
+         document.querySelector('#password').focus();
+    }else if (!validarRepeatPassword()) {
+         document.querySelector('#repeatPassword').focus();
+    }else if (!validarEmail()) {
+         document.querySelector('#email').focus();
+    }else if (!validarNumeroTelefono()) {
+         document.querySelector('#numeroTelefono').focus();
+    }else{
+         alert("Formulario enviado correctamente.");
+         e.target.submit();
+    }
+}
