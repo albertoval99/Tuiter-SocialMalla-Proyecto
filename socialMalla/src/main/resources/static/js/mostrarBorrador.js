@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const borradores = JSON.parse(localStorage.getItem("borradores")) || [];
 
-    borradores.forEach((borrador) => {
+    borradores.forEach((b) => {
         let postContainer = document.createElement("div");
         postContainer.className = "post-container";
 
@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let titulo = document.createElement("div");
         titulo.className = "post-titulo";
-        titulo.textContent = borrador.titulo;
+        titulo.textContent = b.titulo;
 
         let descripcion = document.createElement("div");
         descripcion.className = "post-descripcion";
-        descripcion.textContent = borrador.descripcion;
+        descripcion.textContent = b.descripcion;
 
         let footer = document.createElement("div");
         footer.className = "post-footer";
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let fecha = document.createElement("span");
         fecha.className = "post-fecha";
-        let fechaFormatear= new Date(borrador.fecha);
+        let fechaFormatear= new Date(b.fecha);
         let year = fechaFormatear.getFullYear();
         let month = fechaFormatear.getMonth();
         let day = fechaFormatear.getDate();

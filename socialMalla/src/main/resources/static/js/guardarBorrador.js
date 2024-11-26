@@ -1,25 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const botonSaveBorrador = document.getElementById("saveBorrador");
-    const tituloInput = document.getElementById("titulo");
-    const descripcionInput = document.getElementById("descripcion");
+    let botonSaveBorrador = document.querySelector("#saveBorrador");
+    let tituloInput = document.querySelector("#titulo");
+    let descripcionInput = document.querySelector("#descripcion");
 
     botonSaveBorrador.addEventListener("click", (e) => {
         e.preventDefault();
-        const titulo = tituloInput.value;
-        const descripcion = descripcionInput.value;
+        let titulo = tituloInput.value;
+        let descripcion = descripcionInput.value;
 
-
-        const borrador = {titulo: titulo,descripcion: descripcion,fecha: new Date()};
+        let borrador = {titulo: titulo,descripcion: descripcion,fecha: new Date()};
         const borradores = JSON.parse(localStorage.getItem("borradores")) || [];
         borradores.push(borrador);
 
         localStorage.setItem("borradores", JSON.stringify(borradores));
 
-        // Para limpiar el formulario
+        // Para limpiar el formulario cuando se envia
         tituloInput.value = "";
         descripcionInput.value = "";
-
         alert("Borrador guardado");
     });
 });
