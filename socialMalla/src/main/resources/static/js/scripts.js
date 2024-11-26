@@ -55,7 +55,6 @@ function aplicarTemaClaro() {
 /*Poder dar Like*/
 function darLike(){
      const botonesLike = document.querySelectorAll('.boton-like');
-     /*Sin recorrerlos solo actua con el primero*/
        botonesLike.forEach(b => {
          b.addEventListener("click", () => {
             b.classList.toggle('likePulsado');

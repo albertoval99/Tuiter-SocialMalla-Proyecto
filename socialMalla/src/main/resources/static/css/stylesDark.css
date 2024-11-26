@@ -347,6 +347,11 @@ header{
         display:none;/**Ocultar boton tema para ponerlo en aside*/
     }
 
+    .h2IndexMovil{
+        display:flex;
+        justify-content:center;
+    }
+
     body {
         font-size: 10px;
     }

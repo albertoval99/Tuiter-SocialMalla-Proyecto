@@ -96,6 +96,7 @@ main{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    margin-bottom:10px;
       & h2{
       font-size:60px;
       margin-left:420px;
@@ -336,6 +337,11 @@ header{
         & btn-tema{
             display:none;
         }
+    }
+
+    .h2IndexMovil{
+        display:flex;
+        justify-content:center;
     }
 
 
