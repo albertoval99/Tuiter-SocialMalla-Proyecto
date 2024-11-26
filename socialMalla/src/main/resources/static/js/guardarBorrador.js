@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Para limpiar el formulario cuando se envia
         tituloInput.value = "";
         descripcionInput.value = "";
-        alert("Borrador guardado");
+        alert("BORRADOR GUARDADO CON EXITO");
     });
 });

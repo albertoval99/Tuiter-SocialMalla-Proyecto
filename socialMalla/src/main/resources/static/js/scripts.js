@@ -87,7 +87,7 @@ function validarApellidos(){
          return false;
      }
 //     inputApellidos.value= inputApellidos.value.charAt(0).toUpperCase() + inputApellidos.value.substring(1).toLowerCase();
-     let apellidos = inputApellidos.value.split(" ");//LO METO EN UN ARRAY
+     let apellidos = inputApellidos.value.split(" ");
      let apellidosFormateados = apellidos.map((apellido)=>apellido.charAt(0).toUpperCase() + apellido.substring(1).toLowerCase());//LO FORMATEO
      inputApellidos.value = apellidosFormateados.join(" ");
      error.innerText="";
@@ -193,7 +193,7 @@ function validarFormulario(e){
     }else if (!validarNumeroTelefono()) {
          document.querySelector('#numeroTelefono').focus();
     }else{
-         alert("Formulario enviado correctamente.");
+         alert("REGISTRO COMPLETADO CON EXITO");
          e.target.submit();
     }
 }
