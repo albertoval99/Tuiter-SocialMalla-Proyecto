@@ -19,6 +19,7 @@ img {
 }
 
 
+
 /* AQUI EMPIEZA EL MENU LATERAL */
 aside {
     display: flex;
@@ -409,10 +410,13 @@ header{
         flex-direction:column;
     }
 
+    .post-container{
+        width:100%;
+    }
+
     .post {
          max-width: 94%;
          min-width: 94%;
-
     }
 
     .filtros-linea {
