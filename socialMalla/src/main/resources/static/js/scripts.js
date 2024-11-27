@@ -58,10 +58,8 @@ function darLike(){
        botonesLike.forEach(b => {
          b.addEventListener("click", () => {
             b.classList.toggle('likePulsado');
-            /**Con el toggle cambio una clase por otra*/
           });
         });
-
 }
 /*Validaciones*/
 function validarNombre(){
