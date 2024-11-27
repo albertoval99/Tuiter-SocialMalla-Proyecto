@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded",listeners);
 function listeners(){
-    cargarTemaPorDefecto();
     document.querySelector('#btn-tema').addEventListener("click",tema);
     //Este es el boton del tema para el movil
     document.querySelector('.btn-tema').addEventListener("click",tema);
@@ -17,14 +16,6 @@ function listeners(){
 
 }
 /*Cambiar tema*/
-function cargarTemaPorDefecto(){
-    const temaActual = localStorage.getItem('tema');
-    if (temaActual === 'dark') {
-        aplicarTemaOscuro();
-    } else {
-        aplicarTemaClaro();
-    }
-}
 function tema(){
     const temaActual = localStorage.getItem('tema');
 
@@ -52,7 +43,7 @@ function aplicarTemaClaro() {
     }
     localStorage.setItem('tema', 'light');
 }
-/*Poder dar Like*/
+
 function darLike(){
      const botonesLike = document.querySelectorAll('.boton-like');
        botonesLike.forEach(b => {
