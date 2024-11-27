@@ -55,6 +55,7 @@ aside {
     gap: 10px;
     padding-bottom: 40px;
     width: 80%;
+
 }
 
 .boton-menu {
@@ -72,6 +73,7 @@ aside {
     height: 45px;
     font-family: "Oswald", sans-serif;
     font-size: 15px;
+
 }
 
 .boton-menu:hover {
@@ -310,7 +312,6 @@ button {
     cursor:pointer;
 }
 
-
 header{
     display: none;
 }
@@ -432,13 +433,13 @@ header{
 
       }
 
-      form {
+    form {
           width: auto;
-      }
+    }
 
-      .summary-filtro{
+    .summary-filtro{
           padding-top: 20px;
-      }
+    }
 
       .campos-form {
           margin: 1px;
