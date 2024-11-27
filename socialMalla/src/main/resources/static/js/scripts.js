@@ -27,7 +27,6 @@ function cargarTemaPorDefecto(){
 }
 function tema(){
     const temaActual = localStorage.getItem('tema');
-
     if (temaActual === 'dark') {
         aplicarTemaClaro();
     } else {
@@ -95,7 +94,7 @@ function validarEdad(){
     let inputEdad= document.querySelector('#diaNacimiento');
     let error= document.querySelector('#errorEdad');
     let fechaInput= new Date(inputEdad.value);
-    let fecha18Anyos= new Date(Date.now()- 18 * 365 * 24 * 60 * 60 * 1000);
+    let fecha18Anyos= new Date(Date.now()- 18 * 365.25 * 24 * 60 * 60 * 1000);
     if(fechaInput>fecha18Anyos){
         error.innerText = "Debes tener al menos 18 años.";
         inputEdad.classList.add("invalido");

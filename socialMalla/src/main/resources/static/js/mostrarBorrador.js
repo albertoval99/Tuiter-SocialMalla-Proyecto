@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let formateada= `${year}-${month}-${day}`;
         fecha.textContent = formateada;
 
+        //footer.append(usuario,fecha); Es lo mismo
         footer.appendChild(usuario);
         footer.appendChild(fecha);
 
