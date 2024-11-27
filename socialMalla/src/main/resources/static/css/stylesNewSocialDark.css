@@ -51,7 +51,7 @@ textarea{
     border:solid 3px #2C2A2E;
 }
 
-.botones-inicio{
+.cabezera{
     & .btn-tema{
         display:none
     }
